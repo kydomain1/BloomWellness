@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - BloomWellness</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#4CAF50" opacity="0.2"/>
+                            <path d="M20 8C20 8 15 12 15 18C15 21.314 17.686 24 21 24C24.314 24 27 21.314 27 18C27 12 22 8 22 8" stroke="#4CAF50" stroke-width="2" fill="none"/>
+                            <circle cx="21" cy="18" r="2" fill="#4CAF50"/>
+                            <path d="M14 24C14 24 12 26 12 28C12 30.209 13.791 32 16 32C18.209 32 20 30.209 20 28C20 26 18 24 18 24" stroke="#4CAF50" stroke-width="1.5" fill="none"/>
+                            <path d="M22 24C22 24 24 26 24 28C24 30.209 25.791 32 28 32C30.209 32 32 30.209 32 28C32 26 30 24 30 24" stroke="#4CAF50" stroke-width="1.5" fill="none"/>
+                        </svg>
+                        <span>BloomWellness</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-icon" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="search-bar" id="searchBar">
+                <input type="text" id="searchInput" placeholder="Search articles...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Detail -->
+    <section class="article-detail">
+        <div class="container">
+            <!-- Article Header -->
+            <div class="article-header">
+                <div class="article-category" id="articleCategory"></div>
+                <h1 id="articleTitle"></h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> <span id="articleDate"></span></span>
+                    <span><i class="far fa-user"></i> <span id="articleAuthor"></span></span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="article-featured-image" id="featuredImageContainer">
+                <!-- Featured image will be loaded here -->
+            </div>
+
+            <!-- Article Body -->
+            <div class="article-body" id="articleBody">
+                <!-- Article content will be loaded here -->
+            </div>
+
+            <!-- Products Section -->
+            <div id="productsContainer">
+                <!-- Products will be loaded here if available -->
+            </div>
+
+            <!-- Back to Blog -->
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="blog.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#4CAF50" opacity="0.2"/>
+                            <path d="M20 8C20 8 15 12 15 18C15 21.314 17.686 24 21 24C24.314 24 27 21.314 27 18C27 12 22 8 22 8" stroke="#4CAF50" stroke-width="2" fill="none"/>
+                            <circle cx="21" cy="18" r="2" fill="#4CAF50"/>
+                            <path d="M14 24C14 24 12 26 12 28C12 30.209 13.791 32 16 32C18.209 32 20 30.209 20 28C20 26 18 24 18 24" stroke="#4CAF50" stroke-width="1.5" fill="none"/>
+                            <path d="M22 24C22 24 24 26 24 28C24 30.209 25.791 32 28 32C30.209 32 32 30.209 32 28C32 26 30 24 30 24" stroke="#4CAF50" stroke-width="1.5" fill="none"/>
+                        </svg>
+                        <h3>BloomWellness</h3>
+                    </div>
+                    <p>Your comprehensive guide to better living through fashion, beauty, home, travel, finance, and food.</p>
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="blog.html?category=fashion">Fashion & Accessories</a></li>
+                        <li><a href="blog.html?category=beauty">Health & Beauty</a></li>
+                        <li><a href="blog.html?category=home">Home & Garden</a></li>
+                        <li><a href="blog.html?category=travel">Travel & Accommodation</a></li>
+                        <li><a href="blog.html?category=finance">Finance & Insurance</a></li>
+                        <li><a href="blog.html?category=food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest articles and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BloomWellness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/articles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/article.js"></script>
+</body>
+</html>
+
+
