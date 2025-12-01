@@ -122,8 +122,8 @@ function loadFeaturedArticles() {
     // Add click handlers
     container.querySelectorAll('.article-card').forEach(card => {
         card.addEventListener('click', function() {
-            const articleId = this.getAttribute('data-id');
-            window.location.href = `article.html?id=${articleId}`;
+            const articleSlug = this.getAttribute('data-slug');
+            window.location.href = `article.html?slug=${encodeURIComponent(articleSlug)}`;
         });
     });
 }
@@ -131,7 +131,7 @@ function loadFeaturedArticles() {
 // Create Article Card HTML
 function createArticleCard(article) {
     return `
-        <div class="article-card" data-id="${article.id}">
+        <div class="article-card" data-id="${article.id}" data-slug="${article.slug}">
             <div class="article-image">
                 <img src="${article.featuredImage}" alt="${article.title}">
                 <div class="article-category">${article.categoryName}</div>
@@ -143,7 +143,7 @@ function createArticleCard(article) {
                 </div>
                 <h3 class="article-title">${article.title}</h3>
                 <p class="article-excerpt">${article.excerpt}</p>
-                <a href="article.html?id=${article.id}" class="read-more">
+                <a href="article.html?slug=${encodeURIComponent(article.slug)}" class="read-more">
                     Read More <i class="fas fa-arrow-right"></i>
                 </a>
             </div>

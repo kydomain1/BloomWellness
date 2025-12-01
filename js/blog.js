@@ -87,8 +87,8 @@ function displayArticles() {
     container.querySelectorAll('.article-card').forEach(card => {
         card.addEventListener('click', function(e) {
             if (!e.target.closest('.read-more')) {
-                const articleId = this.getAttribute('data-id');
-                window.location.href = `article.html?id=${articleId}`;
+                const articleSlug = this.getAttribute('data-slug');
+                window.location.href = `article.html?slug=${encodeURIComponent(articleSlug)}`;
             }
         });
     });

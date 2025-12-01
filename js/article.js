@@ -1,14 +1,14 @@
 // Article Detail Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    const articleId = getUrlParameter('id');
+    const articleSlug = getUrlParameter('slug');
     
-    if (!articleId) {
+    if (!articleSlug) {
         window.location.href = 'blog.html';
         return;
     }
     
-    const article = getArticleById(articleId);
+    const article = getArticleBySlug(articleSlug);
     
     if (!article) {
         window.location.href = 'blog.html';

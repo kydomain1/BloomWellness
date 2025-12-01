@@ -1,8 +1,19 @@
+// Function to generate slug from title
+function generateSlug(title) {
+    return title
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-') // Replace spaces with hyphens
+        .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+        .trim();
+}
+
 // Articles Database
 const articles = [
     {
         id: 7,
         title: "WeCreat: Built for Efficiency",
+        slug: "wecreat-built-for-efficiency",
         category: "home",
         categoryName: "Home & Garden",
         date: "2025-10-02",
@@ -74,6 +85,7 @@ const articles = [
     {
         id: 1,
         title: "Top 10 Sustainable Fashion Brands You Should Know in 2025",
+        slug: "top-10-sustainable-fashion-brands-you-should-know-in-2025",
         category: "fashion",
         categoryName: "Fashion & Accessories",
         date: "2025-01-15",
@@ -148,6 +160,7 @@ const articles = [
     {
         id: 2,
         title: "Best Natural Skincare Products for Glowing Skin in 2025",
+        slug: "best-natural-skincare-products-for-glowing-skin-in-2025",
         category: "beauty",
         categoryName: "Health & Beauty",
         date: "2025-03-22",
@@ -231,6 +244,7 @@ const articles = [
     {
         id: 3,
         title: "Smart Home Devices That Will Transform Your Living Space",
+        slug: "smart-home-devices-that-will-transform-your-living-space",
         category: "home",
         categoryName: "Home & Garden",
         date: "2025-05-10",
@@ -311,6 +325,7 @@ const articles = [
     {
         id: 4,
         title: "Hidden Gems: 10 Underrated Travel Destinations for 2025",
+        slug: "hidden-gems-10-underrated-travel-destinations-for-2025",
         category: "travel",
         categoryName: "Travel & Accommodation",
         date: "2025-06-18",
@@ -392,6 +407,7 @@ const articles = [
     {
         id: 5,
         title: "Best Credit Cards for Rewards and Cash Back in 2025",
+        slug: "best-credit-cards-for-rewards-and-cash-back-in-2025",
         category: "finance",
         categoryName: "Finance & Insurance",
         date: "2025-08-05",
@@ -478,6 +494,7 @@ const articles = [
     {
         id: 6,
         title: "Essential Kitchen Gadgets and Appliances Every Home Chef Needs",
+        slug: "essential-kitchen-gadgets-and-appliances-every-home-chef-needs",
         category: "food",
         categoryName: "Food & Beverage",
         date: "2025-02-28",
@@ -577,6 +594,11 @@ function getArticleById(id) {
     return articles.find(article => article.id === parseInt(id));
 }
 
+// Function to get article by slug
+function getArticleBySlug(slug) {
+    return articles.find(article => article.slug === slug);
+}
+
 // Function to get articles by category
 function getArticlesByCategory(category) {
     if (category === 'all') {
@@ -625,6 +647,7 @@ if (typeof module !== 'undefined' && module.exports) {
         articles,
         getAllArticles,
         getArticleById,
+        getArticleBySlug,
         getArticlesByCategory,
         searchArticles,
         getFeaturedArticles,
